@@ -22,16 +22,21 @@ public class FourArrayTest {
         fa = new FourArray();
     }
     @Test
-    private void testR1() {
-        Assert.assertEquals("Метод 1",fa.repacking(arr1), outArr1);
+    public void testR1() {
+//        Assert.assertArrayEquals("Метод 1",fa.repacking(arr1), outArr1);
+        Assert.assertArrayEquals(outArr1, fa.repacking(arr1));
     }
+
     @Test(expected = RuntimeException.class)
-    private void testR2() {
-         fa.repacking(arr2);
+    public void testR2() {
+//        fa.repacking(arr2);
+        Assert.assertArrayEquals(outArr2, fa.repacking(arr2));
     }
+
     @Test
-    private void testR3() {
-        Assert.assertEquals("Метод 3",fa.repacking(arr3), outArr3);
+    public void testR3() {
+//        Assert.assertEquals("Метод 3",fa.repacking(arr3), outArr3);
+        Assert.assertArrayEquals(outArr3, fa.repacking(arr3));
     }
 
 }
